@@ -17,7 +17,7 @@ function init() {
     0.1,
     100
   )
-  camera.position.set(0, 0, 10)
+  camera.position.set(0, 0, 15)
   camera.lookAt(scene.position)
 
 
