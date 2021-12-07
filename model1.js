@@ -6,7 +6,7 @@ function init() {
 
   renderer = new THREE.WebGLRenderer()
 
-  renderer.setSize(1000,1000) 
+  renderer.setSize(window.innerWidth*0.4, window.innerHeight*0.9) 
   renderer.setClearColor(0xeeeeee, 1.0) 
   renderer.shadowMap.enable = true 
   document.body.appendChild(renderer.domElement)
