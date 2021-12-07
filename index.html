@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <title>model</title>
+    <title>Robot Playground</title>
     <!-- Import the component -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js"></script>	
 	<link rel="stylesheet" type="text/css" href="https://codemirror.net/lib/codemirror.css">
@@ -21,8 +21,15 @@
 <body>
 	<div class="container">
 		<div class="header">
-			<button id="run-btn">Run</button>
-			<button id="clear-btn">Clear</button>
+			<div class="h2Div"><h2>Robot Playground</h2>				
+<!-- 				<button id="run-btn">Run</button>
+				<button id="clear-btn">Clear</button> -->
+			</div>
+			<div class="btn">
+				<button id="run-btn">Run</button>
+				<button id="clear-btn">Clear</button>
+			</div>
+
 		</div>	
 		
 			<div class="editor">
@@ -30,26 +37,26 @@
 					<iframe id="preview-window"></iframe>
 					<code>
 						px = 0</br>
-					py = 0</br>
-					rx = 0</br>
-					ry = 0</br>
-					t = 0</br>
+						py = 0</br>
+						rx = 0</br>
+						ry = 0</br>
+						t = 0</br>
 
-					function animate() {</br>
-					  //cube.rotation.x = 0.01</br>
-					  //cube.rotation.y = 0.01</br>
-					  cube.rotation.x = rx</br>
-					  cube.rotation.y = ry  </br>
-					  if (t>=360){</br>
-					  	t = 0</br>
-					  }</br>
-					  px = 2*Math.cos(t)</br>
-					  py = 2*Math.sin(t)</br>
-					  cube.position.set(px, py, 0)</br>
-					  t +=1</br>
-					  sleep(500)</br>
-					}</br></br>
-</code>
+						function animate() {</br>
+						  //cube.rotation.x = 0.01</br>
+						  //cube.rotation.y = 0.01</br>
+						  cube.rotation.x = rx</br>
+						  cube.rotation.y = ry  </br>
+						  if (t>=360){</br>
+						  	t = 0</br>
+						  }</br>
+						  px = 2*Math.cos(t)</br>
+						  py = 2*Math.sin(t)</br>
+						  cube.position.set(px, py, 0)</br>
+						  t +=1</br>
+						  sleep(500)</br>
+						}</br></br>
+					</code>
 				</div>		
 				<div class="code">
 					<div class="html-code"></div>
