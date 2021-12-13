@@ -3,9 +3,10 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robot Playground</title>
-    <!-- Import the component -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js"></script>	
 	<link rel="stylesheet" type="text/css" href="https://codemirror.net/lib/codemirror.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.32.0/codemirror.min.js"></script>
@@ -19,53 +20,67 @@
 </head>
 
 <body>
-	<div class="container">
-		<div class="header">
-			<div class="h2Div"><h2>Robot Playground</h2>				
-<!-- 				<button id="run-btn">Run</button>
-				<button id="clear-btn">Clear</button> -->
-			</div>
-			<div class="btn">
-				<button id="run-btn">Run</button>
-				<button id="clear-btn">Clear</button>
+	
+	<div class="container-fluid">	
+		<div class="row header">
+			<div class="col-12 col-xl-auto h2Div" onClick="window.location.reload();">
+				<h2>Robot Playground</h2>				
 			</div>
 
 		</div>	
-		
-			<div class="editor">
-				<div class="preview">
-					<iframe id="preview-window"></iframe>
-					<code>
-						px = 0</br>
-						py = 0</br>
-						rx = 0</br>
-						ry = 0</br>
-						t = 0</br>
 
-						function animate() {</br>
-						  //cube.rotation.x = 0.01</br>
-						  //cube.rotation.y = 0.01</br>
-						  cube.rotation.x = rx</br>
-						  cube.rotation.y = ry  </br>
-						  if (t>=360){</br>
-						  	t = 0</br>
-						  }</br>
-						  px = 2*Math.cos(t)</br>
-						  py = 2*Math.sin(t)</br>
-						  cube.position.set(px, py, 0)</br>
-						  t +=0.1</br>
-						  sleep(50)</br>
-						}</br></br>
-					</code>
-				</div>		
-				<div class="code">
-					<div class="html-code"></div>
-					<!-- <div class="css-code"></div> -->
-					<!-- <div class="js-code-var"></div> -->
-					<div class="js-code"></div>
+				<div class="row justify-content-md-center editor">
+					<div class="col-12 col-xl-6 preview">
+						<div id="preview-window-space">
+							<iframe id="preview-window"></iframe>
+						</div>
+						<div class="ans" id="sample-code">
+							<h3>//Sample Code</h3>
+							<p>
+								px = 0</br>
+								py = 0</br>
+								rx = 0</br>
+								ry = 0</br>
+								t = 0</br>
+
+								function animate() {</br>
+								  //cube.rotation.x = 0.01</br>
+								  //cube.rotation.y = 0.01</br>
+								  cube.rotation.x = rx</br>
+								  cube.rotation.y = ry  </br>
+								  if (t>=360){</br>
+								  	t = 0</br>
+								  }</br>
+								  px = 2*Math.cos(t)</br>
+								  py = 2*Math.sin(t)</br>
+								  cube.position.set(px, py, 0)</br>
+								  t +=0.1</br>
+								  sleep(50)</br>
+								}</br></br>
+							</p>
+						</div>
+						<div class="col-12 col-xl-auto step">
+							<p><i><ol>
+								<li>Copy the sample code.</li>
+								<li>Paste it into the editor.</li>
+								<li>Click Run.</li>
+							</ol></i></p>
+						</div>
+					</div>		
+					<div class="col-12 col-xl-6 code">
+						<div class="btn">
+							<button id="sample-btn" onclick="showSampleCode(); btnText(this.id);">Hide Sample</button>
+							<button id="run-btn" onclick="showSimulation()">Run</button>
+							<button id="clear-btn">Clear</button>
+						</div>
+
+						<div class="html-code"></div>
+						<div class="js-code"></div>
+					</div>
+
 				</div>
 
-			</div>
+		</div>
 	</div>
 	<script type="text/javascript" src="code.js"></script>
 </body>

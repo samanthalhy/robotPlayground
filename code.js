@@ -44,3 +44,30 @@ document.querySelector("#clear-btn").addEventListener("click",function(){
 
 });
 
+function showSampleCode() {
+  var pre = document.getElementById("preview-window-space");
+  var y = document.getElementById("sample-code");
+
+  if (pre.style.display === "block") {
+    pre.style.display = "none";
+    y.style.display = "block";
+    
+  } else {
+    y.style.display = "none";
+    pre.style.display = "block";
+  }
+}
+function showSimulation() {
+  var pre = document.getElementById("preview-window-space");
+  var y = document.getElementById("sample-code");
+  y.style.display = "none";
+  pre.style.display = "block";
+
+}
+function btnText(){
+	document.querySelector('#ShowButton').innerHTML = 'Hide';
+}
+function btnText(btn)  {
+   var text = document.getElementById(btn).firstChild;
+   text.data = text.data == "Hide Sample" ? "Show Sample" : "Hide Sample";
+}
