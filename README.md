@@ -1,4 +1,4 @@
-# robotPlayground
+# Robot Playground
 It is a simple online web-based simulation platform for learning basic control of robotics. It mainly uses Javascript for the controlling and renderring of 3D motion.
 
 ## How to use
