@@ -82,13 +82,18 @@ var canvas = document.getElementById('myCanvas');
 canvas.width  = window.innerHeight*0.8;
 canvas.height = window.innerHeight*0.8;
 console.log(window.innerHeight, window.innerWidth);
-if (window.innerHeight>window.innerWidth){
-    canvas.width  = window.innerHeight*4;
-    canvas.height = window.innerHeight*4;    
-}
 
 var ctx = canvas.getContext('2d');
 var x0 = 100, y0 = canvas.height*0.8, length = 200, dlt = -2;
+var lineWidthSet = 40;
+
+if (window.innerHeight>window.innerWidth){
+    canvas.width  = window.innerHeight*4;
+    canvas.height = window.innerHeight*4;    
+    length = length*0.5;
+    lineWidthSet = lineWidthSet*0.5;
+}
+
 
 var angle1 = -slider1.value* Math.PI / 180;
 var angle2 = -slider2.value* Math.PI / 180;
@@ -115,7 +120,7 @@ var extraY = [];
     lineToAngle(ctx, x0, y0, length, angle1, angle2);
     extraLine(ctx, x2, y2, length, angle1, angle2);
 
-    ctx.lineWidth = 40;
+    ctx.lineWidth = lineWidthSet;
     ctx.strokeStyle = '#04DA0E';
     ctx.stroke();
     ctx.closePath();
