@@ -83,8 +83,8 @@ canvas.width  = window.innerHeight*0.8;
 canvas.height = window.innerHeight*0.8;
 console.log(window.innerHeight, window.innerWidth);
 if (window.innerHeight>window.innerWidth){
-    canvas.width  = window.innerHeight*2;
-    canvas.height = window.innerHeight*2;    
+    canvas.width  = window.innerHeight*4;
+    canvas.height = window.innerHeight*4;    
 }
 
 var ctx = canvas.getContext('2d');
