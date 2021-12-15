@@ -16,39 +16,61 @@
 	<script type="text/jacascript" href="https://codemirror.net/mode/xml/xml.js"></script>
 	<script type="text/jacascript" href="https://codemirror.net/mode/css/css.js"></script>
 	<script type="text/jacascript" href="https://codemirror.net/mode/javascript/javascript.js"></script>
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
-	
+<div class="wrapper">
+    <nav id="sidebar">
+
+        <ul class="list-unstyled components">
+            <p>Menu</p>
+
+            <li>
+                <a href="index.html">Single Robot</a>
+            </li>
+            <li>
+                <a href="robotArm.html">Robot Arm</a>
+            </li>            
+
+        </ul>
+    </nav>	
+
+
 	<div class="container-fluid">	
-		<div class="row header">
-			<div class="col-12 col-xl-auto h2Div" onClick="window.location.reload();">
-				<h2>Robot Playground</h2>				
-			</div>
 
-		</div>	
-			<div class="row justify-content-md-center editor">
-				<div class="col-12 col-xl-6 canvasDiv">
-					<canvas id="myCanvas" width="300" height="300" style="border:1px solid #d3d3d3;">
-		HTML5 canvas is not supported by your browser.</canvas>			
-				</div>					
-				<div class="col-12 col-xl-6 slidecontainer">
-				  <p>Angles:</p>
-				  <input type="range" min="0" max="360" value="0" id="joint1">
-				  <p>Joint 1: <span id="val1"></span></p>
-				  <input type="range" min="0" max="360" value="0" id="joint2">
-				  <p>Joint 2: <span id="val2"></span></p>		  
-				</div>						
+		  		<div class="row header">
+		            <button type="button" id="sidebarCollapse" class="btn btn-info">
+		                <i class="fa fa-bars"></i>
+		                <!-- <span>Menu</span> -->
+		            </button>
+					<div class="col-10 col-xl-auto h2Div" onClick="window.location.reload();">
+						<h2>Robot Playground</h2>				
+					</div>
+
+				</div>	
+				<div class="row justify-content-md-center editor">
+					<div class="col-12 col-xl-6 canvasDiv">
+						<canvas id="myCanvas" width="300" height="300" style="border:1px solid #d3d3d3;">
+			HTML5 canvas is not supported by your browser.</canvas>			
+					</div>					
+					<div class="col-12 col-xl-6 slidecontainer">
+					  <p>Angles:</p>
+					  <input type="range" min="0" max="360" value="0" id="joint1">
+					  <p>Joint 1: <span id="val1"></span></p>
+					  <input type="range" min="0" max="360" value="0" id="joint2">
+					  <p>Joint 2: <span id="val2"></span></p>		  
+					</div>						
 
 
-			</div>
+				</div>
 
-		</div>
 	</div>
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/robotArm_code.js"></script>
 </body>
 </html>

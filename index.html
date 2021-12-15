@@ -16,16 +16,35 @@
 	<script type="text/jacascript" href="https://codemirror.net/mode/xml/xml.js"></script>
 	<script type="text/jacascript" href="https://codemirror.net/mode/css/css.js"></script>
 	<script type="text/jacascript" href="https://codemirror.net/mode/javascript/javascript.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
-	
+<div class="wrapper">
+    <nav id="sidebar">
+
+        <ul class="list-unstyled components">
+            <p>Menu</p>
+
+            <li>
+                <a href="index.html">Single Robot</a>
+            </li>
+            <li>
+                <a href="robotArm.html">Robot Arm</a>
+            </li>            
+
+        </ul>
+    </nav>		
 	<div class="container-fluid">	
 		<div class="row header">
-			<div class="col-12 col-xl-auto h2Div" onClick="window.location.reload();">
-				<h2>Robot Playground</h2>				
-			</div>
+		            <button type="button" id="sidebarCollapse" class="btn btn-info">
+		                <i class="fa fa-bars"></i>
+		                <!-- <span>Menu</span> -->
+		            </button>
+					<div class="col-10 col-xl-auto h2Div" onClick="window.location.reload();">
+						<h2>Robot Playground</h2>				
+					</div>
 
 		</div>	
 
@@ -82,6 +101,8 @@
 
 		</div>
 	</div>
+</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/code.js"></script>
 </body>
 </html>

@@ -1,3 +1,10 @@
+$(document).ready(function () {
+
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+    });
+
+});
 const htmlEditor = CodeMirror(document.querySelector(".editor .code .html-code"),{
 	lineNumbers:true,
 	tabSize:4,

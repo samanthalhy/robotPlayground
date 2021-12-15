@@ -1,3 +1,11 @@
+$(document).ready(function () {
+
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+        $('.h2Div').toggleClass('active');
+    });
+
+});
 var slider1 = document.getElementById("joint1");
 var output1 = document.getElementById("val1");
 output1.innerHTML = slider1.value;
