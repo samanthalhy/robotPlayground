@@ -56,11 +56,18 @@
 			HTML5 canvas is not supported by your browser.</canvas>			
 					</div>					
 					<div class="col-12 col-xl-6 slidecontainer">
+					  <p>Number of DOF: <span id="dofVAl"></span></p>
+					  <input type="range" min="2" max="8" value="2" id="dof"></br></br>
+					  				  
 					  <p>Angles:</p>
-					  <input type="range" min="0" max="360" value="0" id="joint1">
 					  <p>Joint 1: <span id="val1"></span></p>
+					  <input type="range" min="0" max="360" value="0" id="joint1">
+					  
+					  <p>Joint 2: <span id="val2"></span></p>	
 					  <input type="range" min="0" max="360" value="0" id="joint2">
-					  <p>Joint 2: <span id="val2"></span></p>		  
+					  	  
+					  <div id="extraSlider">
+					  </div>
 					</div>						
 
 
