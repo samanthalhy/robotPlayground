@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robot Playground</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js"></script>	
+	<link rel="stylesheet" type="text/css" href="https://codemirror.net/lib/codemirror.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.32.0/codemirror.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.64.0/mode/xml/xml.min.js"></script>
+
+	<script type="text/jacascript" href="https://codemirror.net/lib/codemirror.js"></script>
+	<script type="text/jacascript" href="https://codemirror.net/mode/xml/xml.js"></script>
+	<script type="text/jacascript" href="https://codemirror.net/mode/css/css.js"></script>
+	<script type="text/jacascript" href="https://codemirror.net/mode/javascript/javascript.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+	
+	<div class="container-fluid">	
+		<div class="row header">
+			<div class="col-12 col-xl-auto h2Div" onClick="window.location.reload();">
+				<h2>Robot Playground</h2>				
+			</div>
+
+		</div>	
+			<div class="row justify-content-md-center editor">
+				<div class="col-12 col-xl-6 canvasDiv">
+					<canvas id="myCanvas" width="300" height="300" style="border:1px solid #d3d3d3;">
+		HTML5 canvas is not supported by your browser.</canvas>			
+				</div>					
+				<div class="col-12 col-xl-6 slidecontainer">
+				  <p>Angles:</p>
+				  <input type="range" min="0" max="360" value="0" id="joint1">
+				  <p>Joint 1: <span id="val1"></span></p>
+				  <input type="range" min="0" max="360" value="0" id="joint2">
+				  <p>Joint 2: <span id="val2"></span></p>		  
+				</div>						
+
+
+			</div>
+
+		</div>
+	</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/robotArm_code.js"></script>
+</body>
+</html>
