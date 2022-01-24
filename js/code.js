@@ -69,11 +69,11 @@ function showSimulation() {
   var y = document.getElementById("sample-code");
   y.style.display = "none";
   pre.style.display = "block";
+  var text = document.getElementById("sample-btn").firstChild;
+  text.data = "Show Sample";
 
 }
-function btnText(){
-	document.querySelector('#ShowButton').innerHTML = 'Hide';
-}
+
 function btnText(btn)  {
    var text = document.getElementById(btn).firstChild;
    text.data = text.data == "Hide Sample" ? "Show Sample" : "Hide Sample";
